@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexerModel","timestamp":1792947152558,"sparkVersion":"3.5.9","uid":"StringIndexer_dec3595e6067","paramMap":{"outputCol":"brand_tier_idx","inputCol":"brand_tier","handleInvalid":"keep"},"defaultParamMap":{"outputCol":"StringIndexer_dec3595e6067__output","stringOrderType":"frequencyDesc","handleInvalid":"error"}}

@@ -1,0 +1,9 @@
+pyspark>=3.5,<4
+pandas
+numpy
+matplotlib
+seaborn
+pyarrow
+psutil
+streamlit
+ipykernel

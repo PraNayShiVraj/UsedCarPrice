@@ -1,0 +1,1437 @@
+{
+  "trained_at": "2026-10-25 16:52 UTC",
+  "trained_year": 2026,
+  "spark_version": "3.5.9",
+  "rows_used": 190215,
+  "target": "log(final_price); app applies exp() to the prediction",
+  "best_model": "LinearRegression",
+  "best_params": {
+    "maxIter": 100,
+    "regParam": 0.0,
+    "elasticNetParam": 0.0
+  },
+  "input_columns": [
+    "brand",
+    "model",
+    "location",
+    "fuel",
+    "transmission",
+    "owner",
+    "brand_tier",
+    "car_age",
+    "km_driven",
+    "km_per_year",
+    "engine",
+    "power",
+    "seats",
+    "mileage",
+    "power_per_cc",
+    "accident_history",
+    "accident_count",
+    "insurance_valid",
+    "service_history_available",
+    "odometer_tamper_suspected",
+    "engine_ok",
+    "gearbox_ok",
+    "brakes_ok",
+    "suspension_ok",
+    "battery_ok",
+    "ac_working",
+    "music_system_ok",
+    "power_windows_ok",
+    "seat_damage",
+    "headlight_damage",
+    "taillight_damage",
+    "bumper_damage",
+    "windshield_damage",
+    "door_dent_damage",
+    "paint_damage",
+    "tyre_wear_damage",
+    "dashboard_damage",
+    "damage_score",
+    "working_score"
+  ],
+  "cat_features": [
+    "brand",
+    "model",
+    "location",
+    "fuel",
+    "transmission",
+    "owner",
+    "brand_tier"
+  ],
+  "base_numeric_features": [
+    "car_age",
+    "km_driven",
+    "km_per_year",
+    "engine",
+    "power",
+    "seats",
+    "mileage",
+    "power_per_cc"
+  ],
+  "condition_features": [
+    "accident_history",
+    "accident_count",
+    "insurance_valid",
+    "service_history_available",
+    "odometer_tamper_suspected",
+    "engine_ok",
+    "gearbox_ok",
+    "brakes_ok",
+    "suspension_ok",
+    "battery_ok",
+    "ac_working",
+    "music_system_ok",
+    "power_windows_ok",
+    "seat_damage",
+    "headlight_damage",
+    "taillight_damage",
+    "bumper_damage",
+    "windshield_damage",
+    "door_dent_damage",
+    "paint_damage",
+    "tyre_wear_damage",
+    "dashboard_damage",
+    "damage_score",
+    "working_score"
+  ],
+  "parts": [
+    "seat",
+    "headlight",
+    "taillight",
+    "bumper",
+    "windshield",
+    "door_dent",
+    "paint",
+    "tyre_wear",
+    "dashboard"
+  ],
+  "components": [
+    "engine_ok",
+    "gearbox_ok",
+    "brakes_ok",
+    "suspension_ok",
+    "battery_ok",
+    "ac_working",
+    "music_system_ok",
+    "power_windows_ok"
+  ],
+  "part_weights": {
+    "seat": 1.0,
+    "headlight": 1.0,
+    "taillight": 0.8,
+    "bumper": 1.2,
+    "windshield": 1.2,
+    "door_dent": 1.0,
+    "paint": 0.8,
+    "tyre_wear": 0.8,
+    "dashboard": 1.0
+  },
+  "component_weights": {
+    "engine_ok": 3.0,
+    "gearbox_ok": 2.5,
+    "brakes_ok": 2.0,
+    "suspension_ok": 1.5,
+    "battery_ok": 1.0,
+    "ac_working": 1.0,
+    "music_system_ok": 0.5,
+    "power_windows_ok": 0.5
+  },
+  "choices": {
+    "brand": [
+      "Audi",
+      "BMW",
+      "Datsun",
+      "Ford",
+      "Honda",
+      "Hyundai",
+      "Kia",
+      "MG",
+      "Mahindra",
+      "Maruti",
+      "Mercedes-Benz",
+      "Nissan",
+      "Renault",
+      "Skoda",
+      "Tata",
+      "Toyota",
+      "Volkswagen"
+    ],
+    "location": [
+      "Ahmedabad",
+      "Bangalore",
+      "Chandigarh",
+      "Chennai",
+      "Coimbatore",
+      "Delhi",
+      "Hyderabad",
+      "Indore",
+      "Jaipur",
+      "Kochi",
+      "Kolkata",
+      "Lucknow",
+      "Mumbai",
+      "Nagpur",
+      "Pune"
+    ],
+    "fuel": [
+      "CNG",
+      "Diesel",
+      "Petrol"
+    ],
+    "transmission": [
+      "Automatic",
+      "Manual"
+    ],
+    "owner": [
+      "First",
+      "Second",
+      "Third",
+      "Fourth & Above"
+    ]
+  },
+  "brand_models": {
+    "Audi": [
+      "A4",
+      "Q5"
+    ],
+    "BMW": [
+      "3 Series",
+      "X1"
+    ],
+    "Datsun": [
+      "Redi-GO"
+    ],
+    "Ford": [
+      "EcoSport",
+      "Endeavour",
+      "Figo"
+    ],
+    "Honda": [
+      "Amaze",
+      "City",
+      "Jazz",
+      "WR-V"
+    ],
+    "Hyundai": [
+      "Creta",
+      "Grand i10",
+      "Santro",
+      "Venue",
+      "Verna",
+      "i10",
+      "i20"
+    ],
+    "Kia": [
+      "Seltos",
+      "Sonet"
+    ],
+    "MG": [
+      "Hector"
+    ],
+    "Mahindra": [
+      "Bolero",
+      "Scorpio",
+      "Thar",
+      "XUV300",
+      "XUV500"
+    ],
+    "Maruti": [
+      "Alto 800",
+      "Alto K10",
+      "Baleno",
+      "Celerio",
+      "Ciaz",
+      "Dzire",
+      "Ertiga",
+      "Swift",
+      "Vitara Brezza",
+      "WagonR"
+    ],
+    "Mercedes-Benz": [
+      "C-Class",
+      "E-Class"
+    ],
+    "Nissan": [
+      "Magnite",
+      "Micra"
+    ],
+    "Renault": [
+      "Duster",
+      "Kwid",
+      "Triber"
+    ],
+    "Skoda": [
+      "Octavia",
+      "Rapid"
+    ],
+    "Tata": [
+      "Altroz",
+      "Harrier",
+      "Nexon",
+      "Safari",
+      "Tiago"
+    ],
+    "Toyota": [
+      "Corolla Altis",
+      "Etios",
+      "Fortuner",
+      "Glanza",
+      "Innova Crysta"
+    ],
+    "Volkswagen": [
+      "Polo",
+      "Vento"
+    ]
+  },
+  "model_specs": {
+    "Renault": {
+      "Triber": {
+        "Petrol": {
+          "engine": [
+            999
+          ],
+          "power": 73.7,
+          "mileage": 21.4,
+          "seats": 7
+        }
+      },
+      "Kwid": {
+        "Petrol": {
+          "engine": [
+            799,
+            999
+          ],
+          "power": 65.5,
+          "mileage": 22.0,
+          "seats": 5
+        }
+      },
+      "Duster": {
+        "Diesel": {
+          "engine": [
+            1461
+          ],
+          "power": 102.1,
+          "mileage": 21.3,
+          "seats": 5
+        },
+        "Petrol": {
+          "engine": [
+            1498
+          ],
+          "power": 110.6,
+          "mileage": 18.1,
+          "seats": 5
+        }
+      }
+    },
+    "Maruti": {
+      "Ertiga": {
+        "CNG": {
+          "engine": [
+            1462
+          ],
+          "power": 90.4,
+          "mileage": 25.0,
+          "seats": 7
+        },
+        "Diesel": {
+          "engine": [
+            1248
+          ],
+          "power": 87.1,
+          "mileage": 22.8,
+          "seats": 7
+        },
+        "Petrol": {
+          "engine": [
+            1462
+          ],
+          "power": 108.3,
+          "mileage": 18.2,
+          "seats": 7
+        }
+      },
+      "Alto 800": {
+        "Petrol": {
+          "engine": [
+            796
+          ],
+          "power": 58.9,
+          "mileage": 22.7,
+          "seats": 5
+        },
+        "CNG": {
+          "engine": [
+            796
+          ],
+          "power": 49.4,
+          "mileage": 25.0,
+          "seats": 5
+        }
+      },
+      "WagonR": {
+        "CNG": {
+          "engine": [
+            998
+          ],
+          "power": 61.9,
+          "mileage": 25.0,
+          "seats": 5
+        },
+        "Petrol": {
+          "engine": [
+            998,
+            1197
+          ],
+          "power": 80.8,
+          "mileage": 20.6,
+          "seats": 5
+        }
+      },
+      "Dzire": {
+        "Petrol": {
+          "engine": [
+            1197
+          ],
+          "power": 88.4,
+          "mileage": 20.0,
+          "seats": 5
+        },
+        "CNG": {
+          "engine": [
+            1197
+          ],
+          "power": 74.1,
+          "mileage": 24.9,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1248
+          ],
+          "power": 87.5,
+          "mileage": 22.7,
+          "seats": 5
+        }
+      },
+      "Alto K10": {
+        "Petrol": {
+          "engine": [
+            998
+          ],
+          "power": 74.0,
+          "mileage": 21.3,
+          "seats": 5
+        },
+        "CNG": {
+          "engine": [
+            998
+          ],
+          "power": 61.8,
+          "mileage": 25.0,
+          "seats": 5
+        }
+      },
+      "Baleno": {
+        "Petrol": {
+          "engine": [
+            1197
+          ],
+          "power": 88.9,
+          "mileage": 20.0,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1248
+          ],
+          "power": 87.5,
+          "mileage": 22.7,
+          "seats": 5
+        }
+      },
+      "Celerio": {
+        "Petrol": {
+          "engine": [
+            998
+          ],
+          "power": 73.9,
+          "mileage": 21.3,
+          "seats": 5
+        },
+        "CNG": {
+          "engine": [
+            998
+          ],
+          "power": 61.9,
+          "mileage": 25.0,
+          "seats": 5
+        }
+      },
+      "Vitara Brezza": {
+        "Diesel": {
+          "engine": [
+            1248
+          ],
+          "power": 87.4,
+          "mileage": 22.7,
+          "seats": 5
+        },
+        "Petrol": {
+          "engine": [
+            1462
+          ],
+          "power": 108.3,
+          "mileage": 18.2,
+          "seats": 5
+        }
+      },
+      "Swift": {
+        "CNG": {
+          "engine": [
+            1197
+          ],
+          "power": 74.3,
+          "mileage": 25.1,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1248
+          ],
+          "power": 87.3,
+          "mileage": 22.7,
+          "seats": 5
+        },
+        "Petrol": {
+          "engine": [
+            1197
+          ],
+          "power": 88.7,
+          "mileage": 20.0,
+          "seats": 5
+        }
+      },
+      "Ciaz": {
+        "Petrol": {
+          "engine": [
+            1462
+          ],
+          "power": 108.6,
+          "mileage": 18.2,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1248
+          ],
+          "power": 87.7,
+          "mileage": 22.7,
+          "seats": 5
+        }
+      }
+    },
+    "Nissan": {
+      "Micra": {
+        "Diesel": {
+          "engine": [
+            1461
+          ],
+          "power": 102.4,
+          "mileage": 21.2,
+          "seats": 5
+        },
+        "Petrol": {
+          "engine": [
+            1198
+          ],
+          "power": 88.9,
+          "mileage": 20.1,
+          "seats": 5
+        }
+      },
+      "Magnite": {
+        "Petrol": {
+          "engine": [
+            999
+          ],
+          "power": 73.9,
+          "mileage": 21.3,
+          "seats": 5
+        }
+      }
+    },
+    "Kia": {
+      "Seltos": {
+        "Petrol": {
+          "engine": [
+            1497
+          ],
+          "power": 111.6,
+          "mileage": 18.0,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1493
+          ],
+          "power": 104.8,
+          "mileage": 21.0,
+          "seats": 5
+        }
+      },
+      "Sonet": {
+        "Petrol": {
+          "engine": [
+            1197
+          ],
+          "power": 88.6,
+          "mileage": 20.1,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1493
+          ],
+          "power": 104.8,
+          "mileage": 21.1,
+          "seats": 5
+        }
+      }
+    },
+    "Volkswagen": {
+      "Vento": {
+        "Petrol": {
+          "engine": [
+            999,
+            1598
+          ],
+          "power": 95.4,
+          "mileage": 19.3,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1498
+          ],
+          "power": 104.5,
+          "mileage": 21.0,
+          "seats": 5
+        }
+      },
+      "Polo": {
+        "Diesel": {
+          "engine": [
+            1498
+          ],
+          "power": 105.3,
+          "mileage": 21.0,
+          "seats": 5
+        },
+        "Petrol": {
+          "engine": [
+            999,
+            1198
+          ],
+          "power": 80.8,
+          "mileage": 20.7,
+          "seats": 5
+        }
+      }
+    },
+    "Mahindra": {
+      "Scorpio": {
+        "Diesel": {
+          "engine": [
+            2179,
+            2523
+          ],
+          "power": 163.2,
+          "mileage": 15.4,
+          "seats": 7
+        }
+      },
+      "XUV300": {
+        "Petrol": {
+          "engine": [
+            1197
+          ],
+          "power": 88.4,
+          "mileage": 20.0,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1497
+          ],
+          "power": 104.4,
+          "mileage": 21.0,
+          "seats": 5
+        }
+      },
+      "Bolero": {
+        "Diesel": {
+          "engine": [
+            2523
+          ],
+          "power": 177.3,
+          "mileage": 14.1,
+          "seats": 7
+        }
+      },
+      "XUV500": {
+        "Diesel": {
+          "engine": [
+            2179
+          ],
+          "power": 152.2,
+          "mileage": 16.5,
+          "seats": 7
+        }
+      },
+      "Thar": {
+        "Diesel": {
+          "engine": [
+            2184
+          ],
+          "power": 152.5,
+          "mileage": 16.4,
+          "seats": 4
+        },
+        "Petrol": {
+          "engine": [
+            1997
+          ],
+          "power": 148.0,
+          "mileage": 14.6,
+          "seats": 4
+        }
+      }
+    },
+    "Skoda": {
+      "Octavia": {
+        "Diesel": {
+          "engine": [
+            1968
+          ],
+          "power": 137.2,
+          "mileage": 17.9,
+          "seats": 5
+        },
+        "Petrol": {
+          "engine": [
+            1798
+          ],
+          "power": 134.0,
+          "mileage": 15.9,
+          "seats": 5
+        }
+      },
+      "Rapid": {
+        "Petrol": {
+          "engine": [
+            999,
+            1598
+          ],
+          "power": 94.1,
+          "mileage": 19.4,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1498
+          ],
+          "power": 104.9,
+          "mileage": 21.0,
+          "seats": 5
+        }
+      }
+    },
+    "BMW": {
+      "X1": {
+        "Diesel": {
+          "engine": [
+            1995
+          ],
+          "power": 185.2,
+          "mileage": 15.8,
+          "seats": 5
+        },
+        "Petrol": {
+          "engine": [
+            1499
+          ],
+          "power": 152.0,
+          "mileage": 15.9,
+          "seats": 5
+        }
+      },
+      "3 Series": {
+        "Petrol": {
+          "engine": [
+            1998
+          ],
+          "power": 197.2,
+          "mileage": 12.9,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1995
+          ],
+          "power": 189.5,
+          "mileage": 15.7,
+          "seats": 5
+        }
+      }
+    },
+    "Ford": {
+      "Figo": {
+        "Petrol": {
+          "engine": [
+            1196
+          ],
+          "power": 88.7,
+          "mileage": 20.1,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1399
+          ],
+          "power": 97.8,
+          "mileage": 21.7,
+          "seats": 5
+        }
+      },
+      "EcoSport": {
+        "Petrol": {
+          "engine": [
+            998,
+            1498
+          ],
+          "power": 88.1,
+          "mileage": 19.7,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1498
+          ],
+          "power": 104.7,
+          "mileage": 21.0,
+          "seats": 5
+        }
+      },
+      "Endeavour": {
+        "Diesel": {
+          "engine": [
+            2198,
+            3198
+          ],
+          "power": 192.4,
+          "mileage": 11.9,
+          "seats": 7
+        }
+      }
+    },
+    "MG": {
+      "Hector": {
+        "Petrol": {
+          "engine": [
+            1451
+          ],
+          "power": 107.6,
+          "mileage": 18.4,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1956
+          ],
+          "power": 137.6,
+          "mileage": 18.0,
+          "seats": 5
+        }
+      }
+    },
+    "Audi": {
+      "Q5": {
+        "Petrol": {
+          "engine": [
+            1984
+          ],
+          "power": 192.1,
+          "mileage": 13.2,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1968
+          ],
+          "power": 187.0,
+          "mileage": 16.0,
+          "seats": 5
+        }
+      },
+      "A4": {
+        "Petrol": {
+          "engine": [
+            1984
+          ],
+          "power": 202.0,
+          "mileage": 13.1,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1968
+          ],
+          "power": 180.3,
+          "mileage": 15.9,
+          "seats": 5
+        }
+      }
+    },
+    "Mercedes-Benz": {
+      "E-Class": {
+        "Diesel": {
+          "engine": [
+            1950,
+            2143
+          ],
+          "power": 190.5,
+          "mileage": 15.3,
+          "seats": 5
+        },
+        "Petrol": {
+          "engine": [
+            1991
+          ],
+          "power": 204.9,
+          "mileage": 12.1,
+          "seats": 5
+        }
+      },
+      "C-Class": {
+        "Petrol": {
+          "engine": [
+            1991
+          ],
+          "power": 202.0,
+          "mileage": 12.7,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1950,
+            2143
+          ],
+          "power": 194.7,
+          "mileage": 15.3,
+          "seats": 5
+        }
+      }
+    },
+    "Tata": {
+      "Altroz": {
+        "Petrol": {
+          "engine": [
+            1199
+          ],
+          "power": 88.7,
+          "mileage": 19.9,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1497
+          ],
+          "power": 104.1,
+          "mileage": 21.1,
+          "seats": 5
+        }
+      },
+      "Nexon": {
+        "Petrol": {
+          "engine": [
+            1199
+          ],
+          "power": 88.6,
+          "mileage": 20.0,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1497
+          ],
+          "power": 105.0,
+          "mileage": 21.0,
+          "seats": 5
+        }
+      },
+      "Safari": {
+        "Diesel": {
+          "engine": [
+            1956
+          ],
+          "power": 136.2,
+          "mileage": 18.0,
+          "seats": 7
+        }
+      },
+      "Tiago": {
+        "Petrol": {
+          "engine": [
+            1199
+          ],
+          "power": 88.7,
+          "mileage": 20.1,
+          "seats": 5
+        },
+        "CNG": {
+          "engine": [
+            1199
+          ],
+          "power": 74.2,
+          "mileage": 24.9,
+          "seats": 5
+        }
+      },
+      "Harrier": {
+        "Diesel": {
+          "engine": [
+            1956
+          ],
+          "power": 136.8,
+          "mileage": 17.8,
+          "seats": 5
+        }
+      }
+    },
+    "Hyundai": {
+      "Verna": {
+        "Diesel": {
+          "engine": [
+            1493
+          ],
+          "power": 104.2,
+          "mileage": 21.1,
+          "seats": 5
+        },
+        "Petrol": {
+          "engine": [
+            1497
+          ],
+          "power": 111.1,
+          "mileage": 18.0,
+          "seats": 5
+        }
+      },
+      "i20": {
+        "Petrol": {
+          "engine": [
+            1197
+          ],
+          "power": 88.7,
+          "mileage": 20.0,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1396
+          ],
+          "power": 98.0,
+          "mileage": 21.6,
+          "seats": 5
+        }
+      },
+      "Creta": {
+        "Petrol": {
+          "engine": [
+            1497
+          ],
+          "power": 110.9,
+          "mileage": 18.0,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1493
+          ],
+          "power": 104.4,
+          "mileage": 21.1,
+          "seats": 5
+        }
+      },
+      "Grand i10": {
+        "Diesel": {
+          "engine": [
+            1186
+          ],
+          "power": 83.1,
+          "mileage": 23.1,
+          "seats": 5
+        },
+        "Petrol": {
+          "engine": [
+            1197
+          ],
+          "power": 88.4,
+          "mileage": 20.0,
+          "seats": 5
+        },
+        "CNG": {
+          "engine": [
+            1197
+          ],
+          "power": 74.0,
+          "mileage": 25.1,
+          "seats": 5
+        }
+      },
+      "i10": {
+        "Petrol": {
+          "engine": [
+            1086,
+            1197
+          ],
+          "power": 84.3,
+          "mileage": 20.4,
+          "seats": 5
+        }
+      },
+      "Santro": {
+        "Petrol": {
+          "engine": [
+            1086
+          ],
+          "power": 80.0,
+          "mileage": 20.7,
+          "seats": 5
+        },
+        "CNG": {
+          "engine": [
+            1086
+          ],
+          "power": 67.2,
+          "mileage": 25.1,
+          "seats": 5
+        }
+      },
+      "Venue": {
+        "Diesel": {
+          "engine": [
+            1493
+          ],
+          "power": 105.0,
+          "mileage": 21.1,
+          "seats": 5
+        },
+        "Petrol": {
+          "engine": [
+            998,
+            1197
+          ],
+          "power": 80.2,
+          "mileage": 20.7,
+          "seats": 5
+        }
+      }
+    },
+    "Toyota": {
+      "Corolla Altis": {
+        "Diesel": {
+          "engine": [
+            1364
+          ],
+          "power": 95.6,
+          "mileage": 21.9,
+          "seats": 5
+        },
+        "Petrol": {
+          "engine": [
+            1798
+          ],
+          "power": 133.8,
+          "mileage": 16.1,
+          "seats": 5
+        }
+      },
+      "Etios": {
+        "Petrol": {
+          "engine": [
+            1496
+          ],
+          "power": 110.8,
+          "mileage": 18.0,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1364
+          ],
+          "power": 95.2,
+          "mileage": 21.9,
+          "seats": 5
+        }
+      },
+      "Glanza": {
+        "Petrol": {
+          "engine": [
+            1197
+          ],
+          "power": 88.6,
+          "mileage": 20.0,
+          "seats": 5
+        }
+      },
+      "Fortuner": {
+        "Petrol": {
+          "engine": [
+            2694
+          ],
+          "power": 199.1,
+          "mileage": 9.9,
+          "seats": 7
+        },
+        "Diesel": {
+          "engine": [
+            2393,
+            2755
+          ],
+          "power": 180.3,
+          "mileage": 14.0,
+          "seats": 7
+        }
+      },
+      "Innova Crysta": {
+        "Diesel": {
+          "engine": [
+            2393,
+            2755
+          ],
+          "power": 179.8,
+          "mileage": 13.8,
+          "seats": 7
+        },
+        "Petrol": {
+          "engine": [
+            2694
+          ],
+          "power": 199.1,
+          "mileage": 10.1,
+          "seats": 7
+        }
+      }
+    },
+    "Datsun": {
+      "Redi-GO": {
+        "Petrol": {
+          "engine": [
+            799,
+            999
+          ],
+          "power": 65.7,
+          "mileage": 22.0,
+          "seats": 5
+        }
+      }
+    },
+    "Honda": {
+      "Amaze": {
+        "Diesel": {
+          "engine": [
+            1498
+          ],
+          "power": 104.7,
+          "mileage": 21.0,
+          "seats": 5
+        },
+        "Petrol": {
+          "engine": [
+            1198
+          ],
+          "power": 88.6,
+          "mileage": 20.0,
+          "seats": 5
+        }
+      },
+      "Jazz": {
+        "Petrol": {
+          "engine": [
+            1199
+          ],
+          "power": 88.7,
+          "mileage": 20.0,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1498
+          ],
+          "power": 105.3,
+          "mileage": 21.0,
+          "seats": 5
+        }
+      },
+      "City": {
+        "Diesel": {
+          "engine": [
+            1498
+          ],
+          "power": 104.8,
+          "mileage": 21.0,
+          "seats": 5
+        },
+        "Petrol": {
+          "engine": [
+            1497
+          ],
+          "power": 110.7,
+          "mileage": 18.1,
+          "seats": 5
+        }
+      },
+      "WR-V": {
+        "Petrol": {
+          "engine": [
+            1199
+          ],
+          "power": 88.4,
+          "mileage": 20.0,
+          "seats": 5
+        },
+        "Diesel": {
+          "engine": [
+            1498
+          ],
+          "power": 104.7,
+          "mileage": 21.0,
+          "seats": 5
+        }
+      }
+    }
+  },
+  "ranges": {
+    "year": {
+      "min": 2009.0,
+      "max": 2026.0,
+      "median": 2020.0
+    },
+    "km_driven": {
+      "min": 1087.0,
+      "max": 232962.0,
+      "median": 70776.0
+    },
+    "engine": {
+      "min": 796.0,
+      "max": 3198.0,
+      "median": 1197.0
+    },
+    "power": {
+      "min": 35.0,
+      "max": 297.9,
+      "median": 87.2
+    },
+    "mileage": {
+      "min": 7.0,
+      "max": 32.1,
+      "median": 20.8
+    },
+    "seats": {
+      "min": 4.0,
+      "max": 7.0,
+      "median": 5.0
+    },
+    "price": {
+      "min": 36594.0,
+      "max": 1992696.0,
+      "median": 313662.0
+    }
+  },
+  "brand_tier_map": {
+    "Renault": "Economy",
+    "Maruti": "Economy",
+    "Nissan": "Mid",
+    "Kia": "Premium",
+    "Volkswagen": "Mid",
+    "Mahindra": "Premium",
+    "Skoda": "Premium",
+    "BMW": "Luxury",
+    "Ford": "Economy",
+    "MG": "Luxury",
+    "Audi": "Luxury",
+    "Mercedes-Benz": "Luxury",
+    "Tata": "Mid",
+    "Hyundai": "Economy",
+    "Toyota": "Premium",
+    "Datsun": "Economy",
+    "Honda": "Mid"
+  },
+  "default_brand_tier": "Economy",
+  "grade_rule": {
+    "w_working": 0.5,
+    "w_damage": 0.5,
+    "w_accident": 0.1,
+    "damage_max": 17.6,
+    "cutoffs": [
+      0.6840909090909092,
+      0.8882575757575757,
+      0.9715909090909092
+    ],
+    "labels": [
+      "Poor",
+      "Fair",
+      "Good",
+      "Excellent"
+    ]
+  },
+  "deal_tolerance": 0.08,
+  "deductions_assumed": {
+    "accident_first": 0.1,
+    "accident_extra": 0.03,
+    "major_damage": 0.03,
+    "minor_damage": 0.008,
+    "fault": {
+      "engine_ok": 0.08,
+      "gearbox_ok": 0.06,
+      "brakes_ok": 0.03,
+      "suspension_ok": 0.03,
+      "battery_ok": 0.01,
+      "ac_working": 0.02,
+      "music_system_ok": 0.005,
+      "power_windows_ok": 0.01
+    },
+    "tamper": 0.08,
+    "no_insurance": 0.02,
+    "no_service": 0.03,
+    "cap": 0.6,
+    "noise_sigma": 0.02
+  },
+  "metrics": {
+    "validation": {
+      "rmse": 56867.297062699676,
+      "mae": 38271.580206414576,
+      "r2": 0.9519492828689133
+    },
+    "test": {
+      "rmse": 58253.128641299416,
+      "mae": 38867.69973974376,
+      "r2": 0.9499700407247449
+    },
+    "ablation_test_without_condition": {
+      "rmse": 67265.35449424613,
+      "mae": 45216.126826532956,
+      "r2": 0.9332925238797061
+    },
+    "condition_classifier": {
+      "accuracy": 0.41572758451739344,
+      "f1": 0.26816162196144466
+    },
+    "kmeans_best_k": 3
+  }
+}
